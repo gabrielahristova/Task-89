@@ -16,5 +16,9 @@ export default class Application extends EventEmitter {
     });
 
     this.emit(Application.events.READY);
+
+    let url = `https://swapi.boom.dev/api/planets`;
+
+    let _loading;
   }
 }
