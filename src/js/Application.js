@@ -53,4 +53,14 @@ export default class Application extends EventEmitter {
     let x = await data.text();
     document.getElementsByClassName('main').innerHTML = x;
   }
+
+  _create = () => {
+
+  }
+  _startLoading = () => {
+
+  }
+  _stopLoading = () => {
+
+  }
 }
