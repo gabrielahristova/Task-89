@@ -23,10 +23,9 @@ export default class Application extends EventEmitter {
 
     this.emit(Application.events.READY);
 
-    let url = `https://swapi.boom.dev/api/planets`;
+    
+    }
 
-    let _loading;
-  }
 
   _render({ name, terrain, population }) {
     return `
@@ -47,5 +46,11 @@ export default class Application extends EventEmitter {
   </div>
 </article>
     `;
+  }
+
+  _load = async () => {
+    let data = fetch(`https://swapi.boom.dev/api/planets`);
+    let x = await data.text();
+    document.getElementsByClassName('main').innerHTML = x;
   }
 }
