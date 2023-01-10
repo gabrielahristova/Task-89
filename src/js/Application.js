@@ -52,6 +52,36 @@ export default class Application extends EventEmitter {
     let data = fetch(`https://swapi.boom.dev/api/planets`);
     let x = await data.text();
     document.getElementsByClassName('main').innerHTML = x;
+    fetch("https://swapi.boom.dev/api/planets/1/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/2/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/3/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/4/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/5/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/6/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/7/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/8/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/9/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
+    fetch("https://swapi.boom.dev/api/planets/10/")
+    .then(x => x.text())
+    .then(document.getElementsByClassName('main').innerHTML = x);
   }
 
   _create = () => {
@@ -63,4 +93,6 @@ export default class Application extends EventEmitter {
   _stopLoading = () => {
 
   }
+
+  
 }
