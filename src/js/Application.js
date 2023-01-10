@@ -55,33 +55,22 @@ export default class Application extends EventEmitter {
     fetch("https://swapi.boom.dev/api/planets/1/")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/2/")
+    fetch("https://swapi.boom.dev/api/planets?page=2")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/3/")
+    fetch("https://swapi.boom.dev/api/planets?page=3")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/4/")
+    fetch("https://swapi.boom.dev/api/planets?page=4")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/5/")
+    fetch("https://swapi.boom.dev/api/planets?page=5")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/6/")
+    fetch("https://swapi.boom.dev/api/planets?page=6")
     .then(x => x.text())
     .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/7/")
-    .then(x => x.text())
-    .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/8/")
-    .then(x => x.text())
-    .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/9/")
-    .then(x => x.text())
-    .then(document.getElementsByClassName('main').innerHTML = x);
-    fetch("https://swapi.boom.dev/api/planets/10/")
-    .then(x => x.text())
-    .then(document.getElementsByClassName('main').innerHTML = x);
+
   }
 
   _create = () => {
@@ -91,7 +80,8 @@ export default class Application extends EventEmitter {
 
   }
   _stopLoading = () => {
-
+    let progress = document.getElementsByTagName('progress');
+    progress.style.display = 'none'
   }
 
   
